@@ -2,7 +2,6 @@ if v:progname =~? "evim"
   finish
 endif
 
-" Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
 if has("vms")
@@ -59,7 +58,6 @@ set t_RV=
 set nobackup
 set nowritebackup
 
-autocmd BufNewFile,BufRead *.dsm set filetype=retdecdsm
 autocmd VimEnter * colorscheme  af
 autocmd VimEnter * AirlineTheme powerlineish
 
@@ -73,8 +71,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" alternatively, pass a path where Vundle should install plugins
-" call vundle#begin('~/some/path/here')
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'scrooloose/nerdtree'
@@ -87,5 +84,5 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'neoclide/coc.nvim'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()            
+filetype plugin indent on  
